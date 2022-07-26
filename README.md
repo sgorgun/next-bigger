@@ -1,6 +1,6 @@
 # Next Bigger
 
-Beginner level task to practice iteration and selection statements.
+Intermediate level task to practice iteration and selection statements.
 
 Estimated time to complete the task - 1h.
 
