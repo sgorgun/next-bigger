@@ -1,6 +1,4 @@
-using System;
-
-namespace NextBiggerTask
+﻿namespace NextBiggerTask
 {
     public static class NumberExtension
     {
@@ -12,7 +10,7 @@ namespace NextBiggerTask
         /// The nearest largest integer consisting of the digits  of the given positive integer and null if no such number exists.
         /// </returns>
         /// <exception cref="ArgumentException">Thrown when source number is less than 0.</exception>
-        public static int? NextBiggerThan(int number)
+        public static int NextBiggerThan(int number)
         {
             throw new NotImplementedException("You need to implement this method.");
         }

@@ -1,8 +1,5 @@
-using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using static NextBiggerTask.NumberExtension;
-
-#pragma warning disable CA1707
 
 namespace NextBiggerTask.Tests
 {
@@ -18,20 +15,26 @@ namespace NextBiggerTask.Tests
         [TestCase(3456432, ExpectedResult = 3462345)]
         [TestCase(124121133, ExpectedResult = 124121313)]
         public int? NextBiggerThan_NextBiggerNumberExists(int number)
-            => NextBiggerThan(number);
+        {
+            return NextBiggerThan(number);
+        }
 
-        [TestCase(10, ExpectedResult = null)]
-        [TestCase(int.MaxValue, ExpectedResult = null)]
-        [TestCase(2, ExpectedResult = null)]
+        [TestCase(10, ExpectedResult = -1)]
+        [TestCase(int.MaxValue, ExpectedResult = -1)]
+        [TestCase(2, ExpectedResult = -1)]
         [TestCase(2000, ExpectedResult = null)]
-        [TestCase(111111111, ExpectedResult = null)]
+        [TestCase(111111111, ExpectedResult = -1)]
         public int? NextBiggerThan_NextBiggerNumberDoesNotExist(int number)
-            => NextBiggerThan(number);
+        {
+            return NextBiggerThan(number);
+        }
 
         [TestCase(-1)]
         [TestCase(-10)]
         [TestCase(int.MinValue)]
         public void NextBiggerThan_WithNegativeNumber_ThrowArgumentException(int number)
-            => Assert.Throws<ArgumentException>(() => NextBiggerThan(number), message: $"Value of {nameof(number)} cannot be less zero.");
+        {
+            Assert.Throws<ArgumentException>(() => NextBiggerThan(number), message: $"Value of {nameof(number)} cannot be less zero.");
+        }
     }
 }
