@@ -22,7 +22,7 @@ namespace NextBiggerTask.Tests
         [TestCase(10, ExpectedResult = -1)]
         [TestCase(int.MaxValue, ExpectedResult = -1)]
         [TestCase(2, ExpectedResult = -1)]
-        [TestCase(2000, ExpectedResult = null)]
+        [TestCase(2000, ExpectedResult = -1)]
         [TestCase(111111111, ExpectedResult = -1)]
         public int? NextBiggerThan_NextBiggerNumberDoesNotExist(int number)
         {
